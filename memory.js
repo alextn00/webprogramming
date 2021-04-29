@@ -15,6 +15,10 @@ var cards; // 카드 목록
 var score = 0; // 점수
 var openedCtn = 0; // 맞춘 카드 갯수
 
+var starttime = 0; 
+var endtime = 0;
+var time = 0;
+
 // 카드 배치
 function setTable() {
     cards = [
@@ -64,7 +68,7 @@ function startGame() {
     function setText() {
         $('#ready').text(--sec);
     }
-
+    starttime = performance.now();
     //카운트 다운
     var intervalID = setInterval(setText, 1000);
     setTimeout(function () {
@@ -102,7 +106,10 @@ $(document).on('click', '#cardTable td', function () {
             openCardId2 = '';
             scorePlus();
             if (++openedCtn == 12) {
-                alert('성공!!\n' + score + '점 입니다!');
+                endtime = performance.now();
+                time = (endtime - starttime)/1000;
+                time = Math.round(time);
+                alert('성공!!('+ time + '초)\n' + score + '점 입니다!');
             }
         } 
         else { // 불일치
@@ -128,17 +135,17 @@ function back() {
 function scoreInit() {
     score = 0;
     openedCtn = 0;
-    $('#score').text(score);
+    $('#scorecard').text(score);
 }
 // 점수 증가
 function scorePlus() {
     score += 10;
-    $('#score').text(score);
+    $('#scorecard').text(score);
 }
 // 점수 감소
 function scoreMinus() {
     score -= 5;
-    $('#score').text(score);
+    $('#scorecard').text(score);
 }
 
 $(document).on('click', '#button', function () {

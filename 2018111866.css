@@ -9,6 +9,9 @@ html{
     background:blanchedalmond;
     font-family: 'Amatic SC', cursive;
 }
+#form{
+    margin-top: 25px;
+}
 div{
     width: 1050px;
     height: 700px;

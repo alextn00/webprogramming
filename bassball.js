@@ -11,7 +11,6 @@ var number_count = 0;
 const MAX_COUNT = 9;
 
 /*  ─────────────────────  메세지 설정  ─────────────────────  */
-
 var notice = {
     notOne: "한 칸에 숫자를 하나씩 입력하세요.",
     notNumber: "숫자가 아닙니다.",
@@ -20,9 +19,7 @@ var notice = {
     incorrect: "틀렸습니다. 새 게임을 진행하세요."
 };
 
-
 /*  ────────────────────  메세지 팝업창  ────────────────────  */
-
 function alertWindow(message) { // "alert()" 대신에, 팝업창을 만듦
 
     var text = "<p>" + message + "</p><br />";
@@ -38,7 +35,6 @@ function alertWindow(message) { // "alert()" 대신에, 팝업창을 만듦
 }
 
 /*  ───────────────────   문제 출제용 함수   ───────────────────  */
-
 function setQuestion(lengths) {
 
     var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -47,17 +43,13 @@ function setQuestion(lengths) {
     return array.slice(0, lengths);
 }
 
-
 /*  ─────────────────────  재시작용  ─────────────────────  */
-
 function reStarting() {
     count = 0; question = []; number_count = 0;
     number_chance.innerHTML = " ";
 }
 
-
 /*  ───────────────────   게임 진행할 함수   ───────────────────  */
-
 function playOneRound(tagList) {
 
     var lengths = tagList.length;
@@ -100,7 +92,6 @@ function playOneRound(tagList) {
         else if (position > -1) { cows += 1; }
     }
 
-
     if (bulls < lengths && count == 8) { final = notice.incorrect }
     else if (bulls == lengths) { return alertWindow(notice.correct) }
 
@@ -115,7 +106,6 @@ function playOneRound(tagList) {
         guess: guessText,
         final: final
     };
-
 
     if (final) { reStarting(); }
     else { count++; }
@@ -134,7 +124,6 @@ function bullsAndCows() {
     var strikes = result.bulls;
     var balls = result.cows;
     var roundScore = strikes + " 스트라이크 │ " + balls + " 볼";
-
 
     var count = result.count;
     if (count == 0) { deleteText(); }
@@ -164,7 +153,6 @@ function bullsAndCows() {
 }
 
 /*  ──────────────────  마우스 커서, 자동 이동  ──────────────────  */
-
 function changeFocus(tag, next, event) {
 
     event = event || window.event;
@@ -184,7 +172,6 @@ if (inputList[3] != undefined) {
 }
 
 /*  ─────────────────────    리셋 효과   ─────────────────────  */
-
 function deleteText() {
     inputList[0].focus();
 
