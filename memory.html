@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>메모리게임</title>
+        <link rel="stylesheet" href="memory.css">
+        <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <table class="title" style="width: 450px;">
+            <tr>
+                <td id="title">메모리게임</td>
+                <td id="score" rowspan="2" style="width: 80px;">0</td>
+            </tr>
+            <tr>
+                <td id="text">같은 색 카드를 선택하세요!</td>
+            </tr>
+        </table>
+        <div class="table">
+            <div id='ready'>
+                READY
+            </div>
+            <table id='cardTable'>
+            </table>
+            <div id='info'>
+                START 버튼을 눌러주세요.<br>
+            </div>
+        </div>
+        <button id="button">START!</button>
+        <script src="memory.js"></script>
+    
+    </body>
+
+</html>
