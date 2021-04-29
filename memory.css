@@ -13,15 +13,30 @@ body{
 .title{
     position: relative;
     margin-top: 50px;
+    padding: -10%;
 }
 #title{
-    font-size: 50px;
+    font-size: 60px;
+    height: fit-content;
+    margin: 1px;
+}
+#titlePad{
+    width: 350px;
+}
+#scorePad{
+    width: 100px;
+}
+#scoreType{
+    font-size: 15px;
+    margin: 25px;
+}
+#scorecard{
+    font-size: 30px;
+    margin: 10px;
 }
 #text{
     font-size: 25px;
-}
-#score{
-    font-size: 40px;
+    margin: 5px;
 }
 
 button{

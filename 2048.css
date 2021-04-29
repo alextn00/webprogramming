@@ -1,3 +1,6 @@
+*{
+    text-align: center;
+}
 td{
     border: 2px solid #372c25;
     border-radius: 9px;
@@ -16,6 +19,10 @@ p{
 }
 body{
     background-color: #372C25;
+}
+table{
+    text-align: center;
+    margin-left: 37%;
 }
 #title{
     color: white;

@@ -13,11 +13,11 @@ const MAX_COUNT = 9;
 /*  ─────────────────────  메세지 설정  ─────────────────────  */
 
 var notice = {
-    notOne: "한 칸에 숫자를 하나씩 입력하세요.", 
-    notNumber: "숫자가 아닙니다.", 			 
-    repeated: "같은 숫자가 이미 있습니다. 다른 숫자를 입력하세요.", 
-    correct: "정답입니다.", 				 
-    incorrect: "틀렸습니다. 새 게임을 진행하세요." 
+    notOne: "한 칸에 숫자를 하나씩 입력하세요.",
+    notNumber: "숫자가 아닙니다.",
+    repeated: "같은 숫자가 이미 있습니다. 다른 숫자를 입력하세요.",
+    correct: "정답입니다.",
+    incorrect: "틀렸습니다. 새 게임을 진행하세요."
 };
 
 
@@ -50,8 +50,10 @@ function setQuestion(lengths) {
 
 /*  ─────────────────────  재시작용  ─────────────────────  */
 
-function reStarting() { count = 0; question = []; number_count = 0; 
-    number_chance.innerHTML = " ";}
+function reStarting() {
+    count = 0; question = []; number_count = 0;
+    number_chance.innerHTML = " ";
+}
 
 
 /*  ───────────────────   게임 진행할 함수   ───────────────────  */
@@ -99,8 +101,8 @@ function playOneRound(tagList) {
     }
 
 
-    if (bulls < lengths && count == 8) { final = notice.incorrect}
-    else if (bulls == lengths) {return alertWindow(notice.correct)}
+    if (bulls < lengths && count == 8) { final = notice.incorrect }
+    else if (bulls == lengths) { return alertWindow(notice.correct) }
 
     questionText = question.join(", ");
     guessText = guess.join(", ");
@@ -161,10 +163,29 @@ function bullsAndCows() {
     answer.innerHTML = text;
 }
 
+/*  ──────────────────  마우스 커서, 자동 이동  ──────────────────  */
+
+function changeFocus(tag, next, event) {
+
+    event = event || window.event;
+
+    var keyCode = event.which || event.keyCode;
+
+    if (keyCode == 8 || keyCode == 46) { return; }
+
+    else if (tag.value.length == 1) { inputList[next].select(); }
+}
+
+inputList[0].onkeyup = function (e) { changeFocus(this, 1, e) };
+inputList[1].onkeyup = function (e) { changeFocus(this, 2, e) };
+
+if (inputList[3] != undefined) {
+    inputList[2].onkeyup = function (e) { changeFocus(this, 3, e) };
+}
+
 /*  ─────────────────────    리셋 효과   ─────────────────────  */
 
 function deleteText() {
-
     inputList[0].focus();
 
     for (var x = 0; x < trList.length; x++) {

@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>숫자 야구</title>
         <link rel="stylesheet" href="baseball.css">
     </head>
+
     <body>
-        <div class="title">0~9 사이의 숫자를 입력하세요.</div>
-        <div class="turn">남은 턴</div> <p/>
-        <span id="chance_count"></span> <p/>
-        <div class="form">
-            <form id="formArea">
-                <input id="input_1" type="text" class="text" size="5">
-                <input id="input_2" type="text" class="text" size="5">
-                <input id="input_3" type="text" class="text" size="5">
-                <input id="input_4" type="text" class="text" size="5">
-                <p />
-            </form>
-            <div class="button">
-                <button id="submit" onclick="bullsAndCows()">입력</button>
-                <button id="init" onclick="reStarting(); deleteText()">초기화</button>
-            </div>
+        <table class="title">
+            <tr>
+                <td id="titlePad">
+                    <p id="title">0~9 사이의 숫자를 입력하세요.</p>
+                </td>
+                <td id="turnPad">
+                    <p id="turn">남은 턴</p>
+                    <p id="chance_count">0</p>
+                </td>
+            </tr>
+        </table>
+        <form id="formArea">
+            <input id="input_1" type="text" class="text" size="5">
+            <input id="input_2" type="text" class="text" size="5">
+            <input id="input_3" type="text" class="text" size="5">
+            <input id="input_4" type="text" class="text" size="5"><br>
+        </form>
+        <div class="button">
+            <button id="submit" onclick="bullsAndCows()">입력</button>
+            <button id="clear" onclick="reStarting(); deleteText()">초기화</button>    
         </div>
         
         
         <p id="check_Correct"></p>
 
-        <table style="width: 450px;">
+        <table id="scoretable"style="width: 450px;" border="1">
             <thead>
                 <tr>
-                    <th colspan="3">score</th>
+                    <th colspan="3" style="height: 30px;">score</th>
                 </tr>
             </thead>
             <tbody id="tbodyArea">
@@ -78,9 +85,8 @@
                     <td></td>
                 </tr>
             </tbody>
-        </table> <p/>
+        </table>
         <p id="answer"></p>
+        <script src="bassball.js"></script>
     </body>
-    <script src="bassball.js"></script>
-
 </html>

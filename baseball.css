@@ -5,94 +5,62 @@
 @import url(https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap);
 
 html {
+    text-align: center;
     box-sizing: border-box;
     background:seashell;
-    font-family: 'Black Han Sans', sans-serif;
-    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    margin-left: 37%;
 }
-body {
-    padding: 0;
-    margin: 0;
-  }
 .title{
-    text-align: center;
-    font-size: 35px;
-    line-height: 1;
-    float: left;
     margin-top: 50px;
-    margin-left: 35%;
+    padding: -10%;
 }
-.turn{
-    text-align: center;
+#title{
+    font-size: 45px;
+    height: fit-content;
+    margin: 1px;
+}
+#titlePad{
+    width: 350px;
+}
+#turnPad{
+    width: 100px;
+}
+#turn{
     font-size: 20px;
-    float: left;
-    margin-top: 60px;
-    margin-bottom: 0;
-    margin-left: 20px;
- }
- .form{
-    text-align: center;
-    position: relative;
-    
- }
- #formArea{
-    position: absolute;
-    margin-top: 120px;
-    margin-left: 38%;
- }
+}
 #chance_count{
-    position: absolute;
-    margin-left: -2%;
-    font-size: 25px;
-    margin-top: 110px;
+    font-size: 30px;
+    margin: 10px;
 }
-#input_1{
-    float: left;
-    margin-left: 0;
-}
-#input_2{
-    float: left;
-    margin-left: 10px;
-}
-#input_3{
-    float: left;
-    margin-left: 10px;
-}
-#input_4{
-    float: left;
-    margin-left: 10px;
+form{
+    margin-top: 10px;
+    margin-right: 65%;
 }
 .button{
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 43%;
+    margin-top: 5px;
+    margin-right: 65%;
 }
 #submit{
     width: 60px;
     height: 30px;
     text-align: center;
+    margin-left: 90px;
 }
-#init{
+#clear{
     width: 60px;
     height: 30px;
     text-align: center;
+    margin-right: 90px;
 }
-table {
+#scoretable {
     border: 1px solid #333333;
     border-collapse: collapse;
-    position: absolute;
-    margin-top: 250px;
-    margin-left: 38%;
     font-family: 'Do Hyeon', sans-serif;
     font-size: 20px;
-}
-th, td {
-    border: 1px solid #333333;
-    text-align: center;
     padding: 5px;
+    text-align: center;
 }
 #answer{
-    position: absolute;
-    margin-top: 590px;
-    margin-left: 37%;
+    margin-right: 65%;
 }
