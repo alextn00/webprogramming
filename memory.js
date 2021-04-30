@@ -43,7 +43,7 @@ function setTable() {
         var idx = generateRandom(0, 23 - i);
         var img = cards.splice(idx, 1);
 
-        cardTableCode += '<td id="card' + i + '"><img src="/' + img + '"><span>?</span></td>';
+        cardTableCode += '<td id="card' + i + '"><img src="' + img + '"><span>?</span></td>';
     }
 
     cardTableCode += '</tr>';
