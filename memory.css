@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap);
+
+body{
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: azure;
+    width: 450px; 
+    margin-left: 37%;
+}
+.title{
+    position: relative;
+    margin-top: 50px;
+    padding: -10%;
+}
+#title{
+    font-size: 60px;
+    height: fit-content;
+    margin: 1px;
+}
+#titlePad{
+    width: 350px;
+}
+#scorePad{
+    width: 100px;
+}
+#scoreType{
+    font-size: 15px;
+    margin: 25px;
+}
+#scorecard{
+    font-size: 30px;
+    margin: 10px;
+}
+#text{
+    font-size: 25px;
+    margin: 5px;
+}
+button{
+    border: none;
+    font-size: 25px;
+    color: white; 
+    background-color: #5AAFFF; 
+    width: 450px;
+    height: 50px;
+    padding: 5px; 
+    cursor: pointer;
+    margin-top: 10px;font-family: 'Antonio', sans-serif;
+}
+.table{
+    position: relative;
+    margin-top: 20px;
+}
+#cardTable{
+    border-collapse: collapse;
+}
+
+#cardTable td{
+    border: 1px solid #5AAFFF; 
+    width: 75px;
+    height: 121px; 
+    text-align: center; 
+    cursor: pointer;
+}
+
+#cardTable td img{
+    max-width: 100%;
+}
+
+#cardTable td span{
+    font-size: 22pt;
+    font-weight: bold; 
+    color: #5AAFFF; 
+    display: none;
+}
+
+#ready{
+    background-color: #5AAFFF; 
+    color: white; 
+    font-size: 20pt;
+    padding: 5px;
+    font-family: 'Antonio', sans-serif;
+}
+
+#info{
+    width: 450px; 
+    height: 250px; 
+    background-color: #DDDDDD; 
+    color: white; 
+    padding-top: 230px;
+    font-size: 30px;
+}
+ 
